@@ -9,7 +9,7 @@ import {
 
 class WelcomeHeader extends React.Component {
   render() {
-    return <Text>Hello world</Text>
+    return <Text>RememberAll</Text>
   }
 }
 

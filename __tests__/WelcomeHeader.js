@@ -14,9 +14,9 @@ describe('WelcomeHeader', () => {
     );
   });
 
-  it('says hello world', () => {
+  it('RememberAll', () => {
     const tree = renderer.create(<WelcomeHeader />);
     const jsontree = tree.toJSON()
-    expect(jsontree.children).to.include('Hello world');
+    expect(jsontree.children).to.include('RememberAll');
   });
 });

@@ -22,7 +22,7 @@ export default class RememberAll extends Component {
       <Tester specs={[AddContactSpec]} store={testHookStore}>
         <RememberAllApp />
       </Tester>
-    )
+    );
   }
 }
 

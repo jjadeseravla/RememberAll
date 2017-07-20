@@ -26,6 +26,8 @@ class RememberAllApp extends React.Component {
   }
 }
 
+const TestableApp = hook(RememberAllApp);
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -45,4 +47,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default RememberAllApp
+export default TestableApp;

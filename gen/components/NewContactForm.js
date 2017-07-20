@@ -16,10 +16,12 @@ class NewContactForm extends React.Component {
       <View>
         <TextInput
           onChangeText={(text) => this.setState({text})}
+          ref='NewContactForm.TextInput'
           value={this.state.text}
         />
         <Button
           onPress={this.addContact}
+          ref='NewContactForm.Button'
           title='Add new contact'
           // accessibilityLabel='Add contact button'
         />

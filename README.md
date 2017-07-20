@@ -58,6 +58,21 @@ react-native run-android
 - Lubos Michalic  [@lubosmichalic](https://github.com/lubosmichalic)
 - Jenny Wem  [@wemmm](http://github.com/wemmm)
 
+# Vat we svore
+#### CHARTER:
+```
+We have stand-ups at 9:42 every day.
+We will endeavour to have a laugh.
+We commit in the present tense.
+We use sensible, informative commit messages.
+We review any issues as they arise.
+We definitely have retros at 6PM, or 5PM in the event that someone is leaving early.
+We actively rotate the leaders of retros and stand-ups.
+We will have lunch/drinks together at some point (and we will not talk about code)
+We respect that we all have lives outside of coding.
+Well-being of team members comes first.
+```
+
 # User Stories
 ```
 As a user,

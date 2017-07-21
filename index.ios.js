@@ -3,7 +3,6 @@
  * https://github.com/facebook/react-native
  * @flow
  */
-
 import React, { Component } from 'react';
 import {
   AppRegistry,
@@ -11,38 +10,20 @@ import {
   Text,
   View
 } from 'react-native';
-import NewContactForm from './gen/components/NewContactForm';
+// import { Tester, TestHookStore } from 'cavy';
+import RememberAllApp from './gen/components/RememberAllApp'
+// import AddContactSpec from './specs/AddContactSpec';
+// const testHookStore = new TestHookStore();
+
 
 export default class RememberAll extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to our Awesome App!
-        </Text>
-        <NewContactForm />
-      </View>
+      // <Tester specs={[AddContactSpec]} store={testHookStore} waitTime={2000} startDelay={3000}>
+        <RememberAllApp />
+      // </Tester>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-});
 
 AppRegistry.registerComponent('RememberAll', () => RememberAll);

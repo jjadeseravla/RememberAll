@@ -7,26 +7,26 @@ import {
   View
 } from 'react-native';
 
+import NewContactForm from './NewContactForm';
+
+// import { hook } from 'cavy';
+
 class RememberAllApp extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.android.js
-        </Text>
-        <Text style={styles.instructions}>
-          Double tap R on your keyboard to reload,{'\n'}
-          Shake or press menu button for dev menu
-        </Text>
+        <View style={styles.container}>
+          <Text style={styles.welcome}>
+            Welcome to our Awesome App!
+          </Text>
+          <NewContactForm />
+        </View>
       </View>
     );
   }
 }
 
-const TestableApp = hook(RememberAllApp);
+// const TestableApp = hook(RememberAllApp);
 
 const styles = StyleSheet.create({
   container: {
@@ -47,4 +47,5 @@ const styles = StyleSheet.create({
   },
 });
 
-export default TestableApp;
+// export default TestableApp;
+export default RememberAllApp

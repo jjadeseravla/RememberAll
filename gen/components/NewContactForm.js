@@ -5,15 +5,29 @@ import {
   View
 } from 'react-native';
 // import { hook } from 'cavy';
+import Realm from 'realm'
+
+let realm = new Realm({
+  schema: [{
+    name: 'Contact', properties: {
+      name: 'string'
+    }
+  }]
+});
 
 class NewContactForm extends React.Component {
   constructor(props) {
     super(props)
     this.state = {text: 'Input Contact Info'}
+    this.createNewContact = this.createNewContact.bind(this);
   }
 
-  addContact() {
-
+  createNewContact() {
+    realm.write(() => {
+      realm.create('Contact', {name: this.state.text});
+    });
+    console.log("HELLOOOOOO")
+    this.props.onSubmit
   };
 
   render() {
@@ -25,7 +39,7 @@ class NewContactForm extends React.Component {
           value={this.state.text}
         />
         <Button
-          onPress={this.addContact}
+          onPress={this.createNewContact}
           // ref={this.props.generateTestHook('NewContactForm.Button')}
           title='Add new contact'
           // accessibilityLabel='Add contact button'

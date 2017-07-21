@@ -6,21 +6,35 @@ import {
   TextInput,
   View
 } from 'react-native';
-
+import ContactsList from './ContactsList';
 import NewContactForm from './NewContactForm';
+import Realm from 'realm'
 
 // import { hook } from 'cavy';
 
+let realm = new Realm({
+  schema: [{
+    name: 'Contact', properties: {
+      name: 'string'
+    }
+  }]
+});
+
 class RememberAllApp extends React.Component {
+
+  refreshContent() {
+    this.render()
+  }
+
   render() {
+
     return (
       <View style={styles.container}>
-        <View style={styles.container}>
-          <Text style={styles.welcome}>
-            Welcome to our Awesome App!
-          </Text>
-          <NewContactForm />
-        </View>
+        <Text style={styles.welcome}>
+          Welcome to our Awesome App!
+        </Text>
+        <NewContactForm onSubmit={this.refreshContent}/>
+        <ContactsList contacts={realm.objects('Contact')}/>
       </View>
     );
   }

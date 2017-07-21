@@ -26,7 +26,6 @@ class NewContactForm extends React.Component {
     realm.write(() => {
       realm.create('Contact', {name: this.state.text});
     });
-    console.log("HELLOOOOOO")
     this.props.onSubmit
   };
 

@@ -5,15 +5,14 @@ import Contact from './Contact'
 class ContactsList extends Component {
 
   renderContacts() {
+    console.log(this.props.contacts)
     return this.props.contacts.map(contact =>
-      <Contact
-        name={contact.name}
-      />
+      <Contact name={contact.name} />
     )
   }
 
   render() {
-    return <View>{this.renderContacts}</View>
+    return <View>{this.renderContacts()}</View>
   };
 
 };

@@ -5,7 +5,8 @@ import { Text } from 'react-native';
 class Contact extends Component {
 
   render() {
-    return <Text>{this.props.contact.name}</Text>
+    console.log(this.props)
+    return <Text>{this.props.name}</Text>
   };
 
 };

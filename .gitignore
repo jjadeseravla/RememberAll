@@ -37,6 +37,10 @@ node_modules/*
 npm-debug.log
 yarn-error.log
 
+# realm
+default.realm
+default.realm.lock
+
 # BUCK
 buck-out/
 \.buckd/

@@ -10,18 +10,18 @@ import {
   Text,
   View
 } from 'react-native';
-// import { Tester, TestHookStore } from 'cavy';
+import { Tester, TestHookStore } from 'cavy';
 import RememberAllApp from './gen/components/RememberAllApp'
-// import AddContactSpec from './specs/AddContactSpec';
-// const testHookStore = new TestHookStore();
+import AddContactSpec from './specs/AddContactSpec';
+const testHookStore = new TestHookStore();
 
 
 export default class RememberAll extends Component {
   render() {
     return (
-      // <Tester specs={[AddContactSpec]} store={testHookStore} waitTime={2000} startDelay={3000}>
+      <Tester specs={[AddContactSpec]} store={testHookStore} waitTime={2000} startDelay={3000}>
         <RememberAllApp />
-      // </Tester>
+      </Tester>
     );
   }
 }

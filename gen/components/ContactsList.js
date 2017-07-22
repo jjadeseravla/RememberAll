@@ -5,9 +5,11 @@ import Contact from './Contact'
 class ContactsList extends Component {
 
   renderContacts() {
-    console.log(this.props.contacts)
-    return this.props.contacts.map(contact =>
-      <Contact name={contact.name} />
+    return this.props.contacts.map((contact, i) =>
+      <Contact
+        name={contact.name}
+        key={`contact#${i}`}
+      />
     )
   }
 

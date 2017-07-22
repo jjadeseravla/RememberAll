@@ -4,7 +4,7 @@ import {
   TextInput,
   View
 } from 'react-native';
-// import { hook } from 'cavy';
+import { hook } from 'cavy';
 import Realm from 'realm'
 
 let realm = new Realm({
@@ -34,12 +34,12 @@ class NewContactForm extends React.Component {
       <View>
         <TextInput
           onChangeText={(text) => this.setState({text})}
-          // ref={this.props.generateTestHook('NewContactForm.TextInput')}
+          ref={this.props.generateTestHook('NewContactForm.TextInput')}
           value={this.state.text}
         />
         <Button
           onPress={this.createNewContact}
-          // ref={this.props.generateTestHook('NewContactForm.Button')}
+          ref={this.props.generateTestHook('NewContactForm.Button')}
           title='Add new contact'
           // accessibilityLabel='Add contact button'
         />
@@ -48,5 +48,5 @@ class NewContactForm extends React.Component {
   }
 }
 
-// export default hook(NewContactForm)
-export default NewContactForm
+export default hook(NewContactForm)
+// export default NewContactForm

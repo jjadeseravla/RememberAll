@@ -10,7 +10,9 @@ import ContactsList from './ContactsList';
 import NewContactForm from './NewContactForm';
 import Realm from 'realm'
 
-// import { hook } from 'cavy';
+import { Platform } from 'react-native';
+
+import { hook } from 'cavy';
 
 let realm = new Realm({
   schema: [{
@@ -39,7 +41,8 @@ class RememberAllApp extends React.Component {
   }
 }
 
-// const TestableApp = hook(RememberAllApp);
+export default hook(RememberAllApp);
+// export default RememberAllApp;
 
 const styles = StyleSheet.create({
   container: {
@@ -59,6 +62,3 @@ const styles = StyleSheet.create({
     marginBottom: 5,
   },
 });
-
-// export default TestableApp;
-export default RememberAllApp

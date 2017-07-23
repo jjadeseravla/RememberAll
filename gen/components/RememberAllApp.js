@@ -13,15 +13,7 @@ import WelcomeHeader from './WelcomeHeader';
 
 import { hook } from 'cavy';
 
-import Realm from 'realm'
-
-let realm = new Realm({
-  schema: [{
-    name: 'Contact', properties: {
-      name: 'string'
-    }
-  }]
-});
+import realm from '../models/realm'
 
 class RememberAllApp extends React.Component {
   constructor(props) {

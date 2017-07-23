@@ -5,15 +5,7 @@ import {
   View
 } from 'react-native';
 import { hook } from 'cavy';
-import Realm from 'realm'
-
-let realm = new Realm({
-  schema: [{
-    name: 'Contact', properties: {
-      name: 'string'
-    }
-  }]
-});
+import realm from '../models/realm'
 
 class NewContactForm extends React.Component {
   constructor(props) {

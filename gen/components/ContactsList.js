@@ -3,7 +3,6 @@ import { Text, View } from 'react-native';
 import Contact from './Contact'
 
 class ContactsList extends Component {
-
   renderContacts() {
     return this.props.contacts.map((contact, i) =>
       <Contact
@@ -16,7 +15,6 @@ class ContactsList extends Component {
   render() {
     return <View>{this.renderContacts()}</View>
   };
-
 };
 
 export default ContactsList

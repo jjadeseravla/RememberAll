@@ -12,7 +12,6 @@ class Contact extends Component {
         </Text>
     )
   };
-
 };
 
 export default hook(Contact);

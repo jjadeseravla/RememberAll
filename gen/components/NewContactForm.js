@@ -26,7 +26,6 @@ class NewContactForm extends React.Component {
     realm.write(() => {
       realm.create('Contact', {name: this.state.text});
     });
-    this.props.onSubmit
   };
 
   render() {
@@ -49,4 +48,3 @@ class NewContactForm extends React.Component {
 }
 
 export default hook(NewContactForm)
-// export default NewContactForm

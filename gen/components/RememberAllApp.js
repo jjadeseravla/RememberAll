@@ -6,13 +6,14 @@ import {
   TextInput,
   View
 } from 'react-native';
+
 import ContactsList from './ContactsList';
 import NewContactForm from './NewContactForm';
-import Realm from 'realm'
-
-import { Platform } from 'react-native';
+import WelcomeHeader from './WelcomeHeader';
 
 import { hook } from 'cavy';
+
+import Realm from 'realm'
 
 let realm = new Realm({
   schema: [{
@@ -23,18 +24,19 @@ let realm = new Realm({
 });
 
 class RememberAllApp extends React.Component {
-
-  refreshContent() {
-    this.render()
+  constructor(props) {
+    super(props)
+    this.state = { refreshing: false }
+    realm.addListener('change', () => {
+      this.setState({ refreshing: true })
+    })
   }
 
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to our Awesome App!
-        </Text>
-        <NewContactForm onSubmit={this.refreshContent}/>
+        <WelcomeHeader />
+        <NewContactForm />
         <ContactsList contacts={realm.objects('Contact')}/>
       </View>
     );
@@ -42,7 +44,6 @@ class RememberAllApp extends React.Component {
 }
 
 export default hook(RememberAllApp);
-// export default RememberAllApp;
 
 const styles = StyleSheet.create({
   container: {

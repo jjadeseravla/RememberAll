@@ -30,7 +30,7 @@ class ContactsList extends React.Component {
     }
     return filteredContacts.map((contact, i) =>
       <Contact
-        name={contact.name}
+        data={contact}
         key={`contact#${i}`}
       />
     )

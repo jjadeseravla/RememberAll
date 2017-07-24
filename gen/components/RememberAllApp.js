@@ -18,17 +18,29 @@ class RememberAllApp extends React.Component {
   constructor(props) {
     super(props)
     this.state = { refreshing: false }
-
+  }
+  renderScene(route, navigator) {
+    switch (route.name) {
+      case 'contacts-list':
+        return <ContactsList navigator={navigator}>
+      case 'details':
+        return <ContactsDetails navigator={navigator} data={route.data}>
+    }
   }
 
   render() {
     return (
-      <View style={styles.container}>
+      <Navigator
+        initialRoute={{name: 'contacts-list', title: 'Contacts List'}}
+        renderScene={this.renderScene}
+        >
+        <View style={styles.container}>
 
-        <WelcomeHeader />
-        <NewContactForm />
-        <ContactsList />
-      </View>
+          <WelcomeHeader />
+          <NewContactForm />
+          <ContactsList />
+        </View>
+      </Navigator>
     );
   }
 }

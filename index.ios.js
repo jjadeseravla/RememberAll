@@ -14,6 +14,7 @@ import { Tester, TestHookStore } from 'cavy';
 import RememberAllApp from './gen/components/RememberAllApp'
 import AddContactSpec from './specs/AddContactSpec';
 import SearchBarSpec from './specs/SearchBarSpec';
+import ContactDetailsSpec from './specs/ContactDetailsSpec';
 const testHookStore = new TestHookStore();
 
 

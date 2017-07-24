@@ -1,15 +1,26 @@
 import React from 'react';
-import { Text } from 'react-native';
+import { TouchableHighlight, View, Text } from 'react-native';
 
 import { hook } from 'cavy';
 
 class Contact extends React.Component {
 
+  showContactDetails() {
+    this.props.navigator.push({name: 'details', data: this.props.data});
+  }
+
   render() {
     return (
-        <Text ref={this.props.generateTestHook(`ContactEntry.${this.props.name}`)}>
-          {this.props.name}
-        </Text>
+        <TouchableHighlight
+          ref={this.props.generateTestHook(`ContactEntry.${this.props.data.name}`)}
+          onPress={this.showContactDetails}
+        >
+          <View>
+            <Text>
+              {this.props.data.name}
+            </Text>
+          </View>
+        </TouchableHighlight>
     )
   };
 };

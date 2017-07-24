@@ -4,7 +4,8 @@ class Contact {}
 Contact.schema = {
     name: 'Contact',
     properties: {
-        name: 'string',
+    name: 'string',
+    tags: 'string',
     },
 };
 

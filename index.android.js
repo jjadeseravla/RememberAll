@@ -13,13 +13,14 @@ import {
 import { Tester, TestHookStore } from 'cavy';
 import RememberAllApp from './gen/components/RememberAllApp'
 import AddContactSpec from './specs/AddContactSpec';
+import SearchBarSpec from './specs/SearchBarSpec';
 const testHookStore = new TestHookStore();
 
 
 export default class RememberAll extends Component {
   render() {
     return (
-      <Tester specs={[AddContactSpec]} store={testHookStore} waitTime={2000} startDelay={3000}>
+      <Tester specs={[AddContactSpec, SearchBarSpec]} store={testHookStore} waitTime={2000} startDelay={3000}>
         <RememberAllApp />
       </Tester>
     );

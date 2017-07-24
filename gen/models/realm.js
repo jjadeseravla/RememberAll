@@ -1,10 +1,11 @@
-var Realm = require('realm');
+import Realm from 'realm';
 
-const ContactSchema = {
-  name: 'Contact',
-  properties: {
-    name: 'string'
-  }
+class Contact {}
+Contact.schema = {
+    name: 'Contact',
+    properties: {
+        name: 'string',
+    },
 };
 
-const realm = new Realm({schema: [ContactSchema]});
+export default new Realm({ schema: [Contact] })

@@ -32,9 +32,14 @@ local.properties
 
 # node.js
 #
-node_modules/
+node_modules/*
+!node_modules/cavy
 npm-debug.log
 yarn-error.log
+
+# realm
+default.realm
+default.realm.lock
 
 # BUCK
 buck-out/

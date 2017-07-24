@@ -1,14 +1,17 @@
 import React, { Component } from 'react';
 import { Text } from 'react-native';
 
+import { hook } from 'cavy';
 
 class Contact extends Component {
 
   render() {
-    console.log(this.props)
-    return <Text>{this.props.name}</Text>
+    return (
+        <Text ref={this.props.generateTestHook(`ContactEntry.${this.props.name}`)}>
+          {this.props.name}
+        </Text>
+    )
   };
-
 };
 
-export default Contact
+export default hook(Contact);

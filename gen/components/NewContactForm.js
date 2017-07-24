@@ -10,23 +10,34 @@ import realm from '../models/realm'
 class NewContactForm extends React.Component {
   constructor(props) {
     super(props)
-    this.state = {text: 'Input Contact Info'}
+    this.state = {nameText: 'Input Contact Info', tagsText: 'Tag your Contact'}
     this.createNewContact = this.createNewContact.bind(this);
   }
 
   createNewContact() {
     realm.write(() => {
-      realm.create('Contact', {name: this.state.text});
+      contact = realm.create('Contact', {name: this.state.nameText});
     });
+    const tags = this.state.tagsText.split(',');
+    for(let tag of tags) {
+      realm.write(() => {
+        contact.tags.push(realm.create('Tag', {name: tag}))
+      })
+    };
   };
 
   render() {
     return (
       <View>
         <TextInput
-          onChangeText={(text) => this.setState({text})}
-          ref={this.props.generateTestHook('NewContactForm.TextInput')}
-          placeholder={this.state.text}
+          onChangeText={(nameText) => this.setState({nameText})}
+          ref={this.props.generateTestHook('NewContactForm.NameInput')}
+          value={this.state.nameText}
+        />
+        <TextInput
+          onChangeText={(tagsText) => this.setState({tagsText})}
+          ref={this.props.generateTestHook('NewContactForm.TagsInput')}
+          value={this.state.tagsText}
         />
         <Button
           onPress={this.createNewContact}

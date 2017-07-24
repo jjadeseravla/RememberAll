@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Text } from 'react-native';
 
 import { hook } from 'cavy';
 
-class Contact extends Component {
+class Contact extends React.Component {
 
   render() {
     return (

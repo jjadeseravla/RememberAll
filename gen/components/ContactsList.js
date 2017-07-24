@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Text, View } from 'react-native';
 import Contact from './Contact'
 
-class ContactsList extends Component {
+class ContactsList extends React.Component {
   renderContacts() {
     return this.props.contacts.map((contact, i) =>
       <Contact

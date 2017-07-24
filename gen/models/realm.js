@@ -5,8 +5,19 @@ Contact.schema = {
     name: 'Contact',
     properties: {
     name: 'string',
-    tags: 'string',
+    tags: {
+      type: 'list', objectType: 'Tag'},
     },
 };
 
-export default new Realm({ schema: [Contact] })
+class Tag {}
+Tag.schema = {
+  name: 'Tag',
+  properties: {
+  name: 'string',
+  contacts: {
+    type: 'list', objectType: 'Contact'},
+  },
+};
+
+export default new Realm({ schema: [Contact, Tag] })

@@ -16,8 +16,14 @@ class NewContactForm extends React.Component {
 
   createNewContact() {
     realm.write(() => {
-      realm.create('Contact', {name: this.state.nameText, tags: this.state.tagsText});
+      contact = realm.create('Contact', {name: this.state.nameText});
     });
+    const tags = this.state.tagsText.split(',');
+    for(let tag of tags) {
+      realm.write(() => {
+        contact.tags.add(realm.create('tag', {name: tag}))
+      })
+    };
   };
 
   render() {

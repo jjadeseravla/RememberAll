@@ -26,7 +26,7 @@ class NewContactForm extends React.Component {
         <TextInput
           onChangeText={(text) => this.setState({text})}
           ref={this.props.generateTestHook('NewContactForm.TextInput')}
-          value={this.state.text}
+          placeholder={this.state.text}
         />
         <Button
           onPress={this.createNewContact}

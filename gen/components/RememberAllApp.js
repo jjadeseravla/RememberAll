@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import {
   AppRegistry,
   StyleSheet,
@@ -13,23 +13,21 @@ import WelcomeHeader from './WelcomeHeader';
 
 import { hook } from 'cavy';
 
-import realm from '../models/realm'
 
 class RememberAllApp extends React.Component {
   constructor(props) {
     super(props)
     this.state = { refreshing: false }
-    realm.addListener('change', () => {
-      this.setState({ refreshing: true })
-    })
+
   }
 
   render() {
     return (
       <View style={styles.container}>
+
         <WelcomeHeader />
         <NewContactForm />
-        <ContactsList contacts={realm.objects('Contact')}/>
+        <ContactsList />
       </View>
     );
   }

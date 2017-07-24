@@ -15,7 +15,7 @@ class SearchBar extends React.Component {
         <TextInput
           ref={this.props.generateTestHook('SearchBar.TextInput')}
           placeholder='SearchBar'
-          onChangeText={(text) => this.handleTextChange({text})}
+          onChangeText={(text) => this.handleTextChange(text)}
         />
       </View>
     )

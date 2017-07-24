@@ -22,25 +22,18 @@ class ContactsList extends React.Component {
   }
 
   renderContacts(text = null) {
-
+    let filteredContacts = null
     if (text === null) {
-      return realm.objects('Contact').map((contact, i) =>
-        <Contact
-          name={contact.name}
-          key={`contact#${i}`}
-        />
-      )
+      filteredContacts = realm.objects('Contact')
     } else {
-      console.log(text)
-      const filterContacts = realm.objects('Contact').filtered(`name CONTAINS "${text.text}"`)
-      console.log(filterContacts)
-      return filterContacts.map((contact, i) =>
+      filteredContacts = realm.objects('Contact').filtered(`name CONTAINS[c] "${text}"`)
+    }
+    return filteredContacts.map((contact, i) =>
       <Contact
         name={contact.name}
         key={`contact#${i}`}
       />
-      )
-    }
+    )
   }
 
   render() {

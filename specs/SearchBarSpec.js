@@ -9,15 +9,15 @@ export default function(spec) {
       await spec.press('NewContactForm.Button');
       await spec.fillIn('SearchBar.TextInput', 'Suzy');
       await spec.pause(1000);
-      await spec.notExists('ContactEntry.Timmy');
-      await spec.exists('ContactEntry.Suzy');
+      await spec.notExists('Contact.Timmy');
+      await spec.exists('Contact.Suzy');
     });
 
     spec.it('filters case-insensitively', async () => {
       await spec.fillIn('SearchBar.TextInput', 'timmy');
       await spec.pause(1000);
-      await spec.notExists('ContactEntry.Suzy');
-      await spec.exists('ContactEntry.Timmy');
+      await spec.notExists('Contact.Suzy');
+      await spec.exists('Contact.Timmy');
     });
   });
 }

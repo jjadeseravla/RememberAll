@@ -9,7 +9,7 @@ import realm from '../gen/models/realm'
 
 describe('Narrative', () => {
 
-  it('add essential info to a contact', () => {
+  it('add specific info to a contact', () => {
     realm.write(() => {
     contact = realm.create('Contact', {name: 'Jenny', role: 'Vaporlord', organisation: 'Makers Academy', context: 'Queer Code'});
     });
@@ -17,4 +17,6 @@ describe('Narrative', () => {
     expect(contact.organisation).to.equal('Makers Academy');
     expect(contact.context).to.equal('Queer Code');
   });
+
+
 });

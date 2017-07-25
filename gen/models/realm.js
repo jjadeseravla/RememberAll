@@ -5,6 +5,9 @@ Contact.schema = {
     name: 'Contact',
     properties: {
     name: 'string',
+    role: {type: 'string', optional: true},
+    organisation: {type: 'string', optional: true},
+    context: {type: 'string', optional: true},
     tags: {
       type: 'list', objectType: 'Tag'},
     },

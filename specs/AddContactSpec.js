@@ -6,7 +6,7 @@ export default function(spec) {
       await spec.fillIn('NewContactForm.NameInput', 'Sally');
       await spec.press('NewContactForm.Button');
       await spec.pause(1000);
-      await spec.exists('ContactEntry.Sally');
+      await spec.exists('Contact.Sally');
     });
   });
 
@@ -15,6 +15,6 @@ export default function(spec) {
     await spec.fillIn('NewContactForm.TagsInput', 'Cool');
     await spec.press('NewContactForm.Button');
     await spec.pause(1000);
-    await spec.exists('ContactEntry.Sally');
+    await spec.exists('Contact.Sally');
   });
 }

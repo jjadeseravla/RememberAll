@@ -3,9 +3,9 @@ export default function(spec) {
   spec.describe('Filtering a contact', function() {
 
     spec.it('filters the contact on the page', async () => {
-      await spec.fillIn('NewContactForm.TextInput', 'Suzy');
+      await spec.fillIn('NewContactForm.NameInput', 'Suzy');
       await spec.press('NewContactForm.Button');
-      await spec.fillIn('NewContactForm.TextInput', 'Timmy');
+      await spec.fillIn('NewContactForm.NameInput', 'Timmy');
       await spec.press('NewContactForm.Button');
       await spec.fillIn('SearchBar.TextInput', 'Suzy');
       await spec.pause(1000);

@@ -10,13 +10,13 @@ import realm from '../models/realm'
 class NewContactForm extends React.Component {
   constructor(props) {
     super(props)
-    this.state = {nameText: 'Input Contact Info', tagsText: 'Tag your Contact'}
+    this.state = {nameText: 'Name', tagsText: 'Tag your Contact'}
     this.createNewContact = this.createNewContact.bind(this);
   }
 
   createNewContact() {
     realm.write(() => {
-      contact = realm.create('Contact', {name: this.state.nameText});
+      contact = realm.create('Contact', {name: this.state.nameText, role: this.state.role, organisation: this.state.organisation, context: this.state.context});
     });
     const tags = this.state.tagsText.split(',');
     for(let tag of tags) {
@@ -32,12 +32,27 @@ class NewContactForm extends React.Component {
         <TextInput
           onChangeText={(nameText) => this.setState({nameText})}
           ref={this.props.generateTestHook('NewContactForm.NameInput')}
-          value={this.state.nameText}
+          placeholder={this.state.nameText}
+        />
+        <TextInput
+          onChangeText={(role) => this.setState({role})}
+          ref={this.props.generateTestHook('NewContactForm.RoleInput')}
+          placeholder='Role'
+        />
+        <TextInput
+          onChangeText={(organisation) => this.setState({organisation})}
+          ref={this.props.generateTestHook('NewContactForm.OrganisationInput')}
+          placeholder='Organisation'
+        />
+        <TextInput
+          onChangeText={(context) => this.setState({context})}
+          ref={this.props.generateTestHook('NewContactForm.ContextInput')}
+          placeholder='Context'
         />
         <TextInput
           onChangeText={(tagsText) => this.setState({tagsText})}
           ref={this.props.generateTestHook('NewContactForm.TagsInput')}
-          value={this.state.tagsText}
+          placeholder={this.state.tagsText}
         />
         <Button
           onPress={this.createNewContact}

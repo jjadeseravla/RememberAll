@@ -20,3 +20,5 @@ describe('WelcomeHeader', () => {
     expect(jsontree.children).to.include('RememberAll');
   });
 });
+
+afterAll(() => setTimeout(() => process.exit(), 4000))

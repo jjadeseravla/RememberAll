@@ -18,7 +18,7 @@ describe('NewContactForm', () => {
     const jsontree = renderer.create(<NewContactForm />).toJSON();
     expect(jsontree.children[0].type).to.equal('TextInput');
     expect(jsontree.children[1].type).to.equal('TextInput');
-    expect(jsontree.children[2].type).to.equal('View');
-    expect(jsontree.children[2].props.accessibilityComponentType).to.equal('button');
+    expect(jsontree.children[5].type).to.equal('View');
+    expect(jsontree.children[5].props.accessibilityComponentType).to.equal('button');
   });
 });

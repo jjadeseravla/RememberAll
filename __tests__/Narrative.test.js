@@ -18,5 +18,14 @@ describe('Narrative', () => {
     expect(contact.context).to.equal('Queer Code');
   });
 
+  // it('assembles a narrative from specific information', () => {
+  //   realm.write(() => {
+  //   contact = realm.create('Contact', {name: 'Jenny', role: 'Vaporlord', organisation: 'Makers Academy', context: 'Queer Code'});
+  //   });
+  //   // console.log(contact)
+  //   console.log(this.createNewNarrative(contact))
+  //   expect(this.createNewNarrative(contact)).to.equal('This is Jenny, who is a Vaporlord at Makers Academy. You met at Queer Code.')
+  // });
+
 
 });

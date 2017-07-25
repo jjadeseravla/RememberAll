@@ -21,4 +21,4 @@ describe('WelcomeHeader', () => {
   });
 });
 
-afterAll(() => setTimeout(() => process.exit(), 1000))
+afterAll(() => setTimeout(() => process.exit(), 4000))

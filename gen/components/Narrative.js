@@ -9,16 +9,10 @@ class Narrative extends React.Component {
     this.state = {contact: this.props.contact}
   }
 
-  createNewNarrative(contact) {
-    return (
-      `This is ${this.state.contact.name}, who is a ${this.state.contact.role} at ${this.state.contact.organisation}. You met at ${this.state.contact.context}.`
-    )
-  };
-
   render() {
     return(
       <Text ref={this.props.generateTestHook(`ContactDetails.${this.state.contact}.Narrative`)}>
-        'I am a narrative without an apostrophe'
+        {`This is ${this.state.contact.name}, a ${this.state.contact.role} who works at ${this.state.contact.organisation}. You met ${this.state.contact.name} at ${this.state.contact.context}! You think that ${this.state.contact.name} is ${this.state.contact.tags[0].name}.`}
       </Text>
     )
   }

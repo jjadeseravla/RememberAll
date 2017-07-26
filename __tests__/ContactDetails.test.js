@@ -18,6 +18,6 @@ describe('ContactDetails', () => {
 
   it('Renders details of a contact', () => {
     const jsontree = renderer.create(<ContactDetails navigation={navigationFake}/>).toJSON();
-    expect(jsontree.children[0].type).to.equal('Text');
+    expect(jsontree.children[0].type).to.include('Text');
   });
 });

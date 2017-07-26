@@ -17,7 +17,7 @@ class Narrative extends React.Component {
 
   render() {
     return(
-      <Text ref={this.props.generateTestHook(`ContactDetails.${this.state.contact.name}.Narrative`)}>
+      <Text ref={this.props.generateTestHook(`ContactDetails.${this.state.contact}.Narrative`)}>
         'I am a narrative without an apostrophe'
       </Text>
     )

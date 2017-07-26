@@ -15,9 +15,9 @@ class NewContactForm extends React.Component {
   }
 
   addContactTag(tagName) {
-    const tagEntry = realm.objects('Tag').filtered(`name CONTAINS[c] "${tagName}"`)[0]
+    const tagEntry = realm.objects('Tag').filtered(`name ==[c] "${tagName}"`)[0]
     if (tagEntry) {
-      if (contact.tags.filtered(`name CONTAINS[c] "${tagEntry.name}"`)[0]){
+      if (contact.tags.filtered(`name ==[c] "${tagEntry.name}"`)[0]){
         return
       } else {
       realm.write(() => {

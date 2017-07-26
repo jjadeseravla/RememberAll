@@ -14,6 +14,14 @@ class Narrative extends React.Component {
       `This is ${this.state.contact.name}, who is a ${this.state.contact.role} at ${this.state.contact.organisation}. You met at ${this.state.contact.context}.`
     )
   };
+
+  render() {
+    return(
+      <Text ref={this.props.generateTestHook(`ContactDetails.${this.state.contact.name}.Narrative`)}>
+        'I am a narrative without an apostrophe'
+      </Text>
+    )
+  }
 };
 
 export default hook(Narrative);

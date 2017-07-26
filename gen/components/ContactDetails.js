@@ -1,5 +1,6 @@
 import React from 'react';
 import { Text, View } from 'react-native';
+import Narrative from './Narrative'
 
 import { hook } from 'cavy';
 
@@ -15,6 +16,8 @@ class ContactDetails extends React.Component {
           { this.state.contact.name }
           { this.state.contact.tags[0].name }
         </Text>
+        <Narrative />
+
       </View>
     )
   };

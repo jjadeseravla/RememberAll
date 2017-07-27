@@ -1,6 +1,6 @@
 import React from 'react';
+import Narrative from './Narrative'
 import { Button, Text, View, StyleSheet } from 'react-native';
-
 
 import { hook } from 'cavy';
 
@@ -40,6 +40,9 @@ class ContactDetails extends React.Component {
             { this.listTags(this.state.contact) }
             {"\n"}
           </Text>
+          <Narrative
+            contact={ this.state.contact }
+          />
           <Text style={styles.tagtext}>
             { this.state.contact.tags[0].name }
           </Text>

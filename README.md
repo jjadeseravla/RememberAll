@@ -1,35 +1,31 @@
 # Remember All
 
-[Vat iz dis?](#vat iz dis?) | [How do I do dis?](#how do i do dis?) | [Vat did you use?](#vat did you use?) | [Who iz rezponsible for dis?](# Who iz rezponsible for dis??) |
+[Abour](#About) | [Instructions](#Instructions) | [Technologies used](#Technologies used) | [Approach](#Approach) | [Contributors](#Contributors) |
 
 
-# Vat iz dis?
+# About
 
 Very cool app that lets you remember folks when you can't even.
 
-# How do i do dis?
+# Instructions
 
 ```
-# clone ze repo
+# Clone the repo
 $ git clone git@github.com:jjadeseravla/RememberAll.git
 
-# go into ze repo
+# Go into the repo
 $ cd RememberAll
 
-# install all ze packages
+# Install all the packages
 $ npm install
+
+# Run the unit tests
+$ npm test
 ```
 
 #### Download either Xcode or Android Studio and run virtual machine
 - [Xcode](https://itunes.apple.com/gb/app/xcode/id497799835?mt=12)
 - [Android Studio](https://developer.android.com/studio/index.html)
-
-while you wait...
-```
-grow coffee
-???
-PROFIT
-```
 
 When you're ready to run the application
 ```
@@ -41,15 +37,16 @@ react-native run-android
 ```
 
 
-# Vat did you use?
+# Technologies used
 - React Native
-- Jest, Enzyme, Chai, Mocha, Flat White and other caffeinated-beverage based testing frameworks ;)
+- Jest & Chai for unit tests
+- Cavy for integration tests
 - Realm DB
 - XCode, Android Studio for Iphone / Android Emulation
 - Waffle.io
 
 
-# Who iz rezponsible for dis?
+# Contributors
 
 - Jade Alvares [@jjadeseravla](http://github.com/jjadeseravla)
 - Simon Ashbery [@siashbery](http://github.com/siashbery)
@@ -58,7 +55,7 @@ react-native run-android
 - Lubos Michalic  [@lubosmichalic](https://github.com/lubosmichalic)
 - Jenny Wem  [@wemmm](http://github.com/wemmm)
 
-# Vat we svore
+# How team RememberAll does things
 #### CHARTER:
 ```
 We have stand-ups at 9:42 every day.
@@ -72,6 +69,18 @@ We will have lunch/drinks together at some point (and we will not talk about cod
 We respect that we all have lives outside of coding.
 Well-being of team members comes first.
 ```
+# Approach
+
+- How to solve the problem
+- Ethics: 'If you have to "get weird" to get some information from someone... it's probably not ok'
+- wrote user Stories
+- Defined MVP as a form with a single text field that saves something to the database
+- Learnt how to use React Native
+- Learnt how to use Realm in conjunction with React Native
+- Learnt how to test React Native (<-- we found this challenging!)
+- Mob programmed our way to MVP (Hallelujah!!)
+![Mob programming](https://user-images.githubusercontent.com/25978953/28678164-8ffac0c6-72e7-11e7-9020-3ef450d7fb0d.jpg)
+- Iterated on MVP by adding one feature at a time
 
 # User Stories
 ```
@@ -102,4 +111,12 @@ I would like to see a contact's profile.
 As a user,
 So I can see and browse all existing contacts,
 I would like to see a full list of contacts upon opening the app.
+
+As a user,
+So I can keep my information up to date,
+I would like to be able to update details of an existing contact.
+
+As a user,
+So I can better remember things about a person,
+I would like to see a narrative of things I know about them on their profile.
 ```

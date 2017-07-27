@@ -91,23 +91,17 @@ const styles = StyleSheet.create({
     textAlign: 'center'
   },
   container: {
-    // flex: 1,
-    // flexDirection: 'row',
     width: 300,
     height: 200,
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: 'white',
-    // borderWidth: 5,
-    // borderColor: 'black'
   },
   container2: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: 'white',
-    // borderWidth: 5,
-    // borderColor: 'black'
   },
 });
 

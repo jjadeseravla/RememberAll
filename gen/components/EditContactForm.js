@@ -37,11 +37,15 @@ class EditContactForm extends React.Component {
 
   render() {
     return (
-      <View>
-        <Text>
-          `Update {this.state.contact.name}'s details`
+      <View style={styles.container}>
+        <Text style={styles.smalltext}>
+          {"\n"}
+          {`Update `}
+          {this.state.contact.name}
+          {`'s details:`}
+          {"\n"}
         </Text>
-        <Text>
+        <Text style={styles.tagtext}>
           Role:
         </Text>
         <TextInput
@@ -49,7 +53,7 @@ class EditContactForm extends React.Component {
           ref={this.props.generateTestHook('EditContactForm.RoleInput')}
           value={this.state.role}
         />
-        <Text>
+        <Text style={styles.tagtext}>
           Organisation:
         </Text>
         <TextInput
@@ -57,7 +61,7 @@ class EditContactForm extends React.Component {
           ref={this.props.generateTestHook('EditContactForm.OrganisationInput')}
           value={this.state.organisation}
         />
-        <Text>
+        <Text style={styles.tagtext}>
           Where you met:
         </Text>
         <TextInput
@@ -65,7 +69,7 @@ class EditContactForm extends React.Component {
           ref={this.props.generateTestHook('EditContactForm.ContextInput')}
           value={this.state.context}
         />
-        <Button
+        <Button color='white'
           onPress={this.updateContact}
           ref={this.props.generateTestHook('EditContactForm.Button')}
           title='Update contact details'
@@ -74,5 +78,36 @@ class EditContactForm extends React.Component {
     )
   }
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#43d8ae',
+    justifyContent: 'center',
+    // alignItems: 'center'
+  },
+  words: {
+    color: 'white',
+    fontSize: 35,
+    fontFamily: 'Euphemia UCAS',
+    fontWeight: 'normal',
+    textAlign: 'center'
+  },
+  tagtext: {
+    color: 'white',
+    fontSize: 17,
+    fontFamily: 'Euphemia UCAS',
+    fontWeight: 'normal',
+    textAlign: 'center'
+  },
+  smalltext: {
+    color: 'white',
+    fontSize: 20,
+    fontFamily: 'Euphemia UCAS',
+    fontWeight: 'normal',
+    textAlign: 'center'
+  },
+});
+
 
 export default hook(EditContactForm)

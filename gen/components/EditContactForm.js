@@ -4,7 +4,8 @@ import {
   Button,
   Text,
   TextInput,
-  View
+  View,
+  StyleSheet
 } from 'react-native';
 import { hook } from 'cavy';
 import realm from '../models/realm'
@@ -38,7 +39,7 @@ class EditContactForm extends React.Component {
     return (
       <View>
         <Text>
-          Update {this.state.contact.name}'s details
+          `Update {this.state.contact.name}'s details`
         </Text>
         <Text>
           Role:

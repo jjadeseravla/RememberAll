@@ -37,21 +37,27 @@ class ContactDetails extends React.Component {
           </Text>
           <Text style={styles.words}>
             { this.state.contact.name }?
-            { this.listTags(this.state.contact) }
             {"\n"}
           </Text>
           <Narrative
-            contact={ this.state.contact }
+          contact={ this.state.contact }
           />
+          <Text style={styles.smalltext}>
+          {"\n"}
+          {`You also think this person is:`}
+          </Text>
           <Text style={styles.tagtext}>
-            { this.state.contact.tags[0].name }
+            { this.listTags(this.state.contact) }
+            {"\n"}
           </Text>
           <Button
+            color="#D38DCC"
             ref={this.props.generateTestHook('ContactDetails.EditButton')}
             title='Edit contact'
             onPress={this.navigateToEdit.bind(this)}
           />
           <Button
+            color="#D38DCC"
             ref={this.props.generateTestHook('ContactDetails.HomeButton')}
             title='Home'
             onPress={this.navigateToHome.bind(this)}
@@ -68,18 +74,21 @@ const styles = StyleSheet.create({
     fontSize: 35,
     fontFamily: 'Euphemia UCAS',
     fontWeight: 'normal',
+    textAlign: 'center'
   },
   tagtext: {
     color: '#43d8ae',
-    fontSize: 25,
+    fontSize: 17,
     fontFamily: 'Euphemia UCAS',
     fontWeight: 'normal',
+    textAlign: 'center'
   },
   smalltext: {
     color: '#43d8ae',
     fontSize: 20,
     fontFamily: 'Euphemia UCAS',
     fontWeight: 'normal',
+    textAlign: 'center'
   },
   container: {
     // flex: 1,

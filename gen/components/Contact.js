@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, TouchableHighlight } from 'react-native';
+import { Text, TouchableHighlight, StyleSheet } from 'react-native';
 
 import { hook } from 'cavy';
 
@@ -18,12 +18,23 @@ class Contact extends React.Component {
         ref={this.props.generateTestHook(`Contact.${this.props.contact.name}`)}
         onPress={this.openContact}
       >
-        <Text>
+        <Text style={styles.smalltext}>
           {this.props.contact.name}
         </Text>
       </TouchableHighlight>
     )
   };
 };
+
+const styles = StyleSheet.create({
+  smalltext: {
+    color: 'white',
+    fontSize: 15,
+    fontFamily: 'Euphemia UCAS',
+    fontWeight: 'bold',
+    textAlign: 'center'
+  },
+});
+
 
 export default hook(Contact);

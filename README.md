@@ -1,6 +1,6 @@
 # Remember All
 
-[Abour](#About) | [Instructions](#Instructions) | [Technologies used](#Technologies used) | [Approach](#Approach) | [Contributors](#Contributors) |
+[About](#About) | [Instructions](#Instructions) | [Technologies used](#Technologies-used) | [Approach](#Approach) | [Contributors](#Contributors) |
 
 
 # About
@@ -75,11 +75,13 @@ Well-being of team members comes first.
 - Ethics: 'If you have to "get weird" to get some information from someone... it's probably not ok'
 - wrote user Stories
 - Defined MVP as a form with a single text field that saves something to the database
+![Mock up of MVP](https://user-images.githubusercontent.com/25978953/28678166-900400c8-72e7-11e7-919f-3211427a2e55.jpg)
 - Learnt how to use React Native
 - Learnt how to use Realm in conjunction with React Native
 - Learnt how to test React Native (<-- we found this challenging!)
 - Mob programmed our way to MVP (Hallelujah!!)
 ![Mob programming](https://user-images.githubusercontent.com/25978953/28678164-8ffac0c6-72e7-11e7-9020-3ef450d7fb0d.jpg)
+![MVP](https://user-images.githubusercontent.com/25978953/28678167-900db488-72e7-11e7-86a1-1d3bb0333c1a.png)
 - Iterated on MVP by adding one feature at a time
 
 # User Stories
@@ -120,3 +122,4 @@ As a user,
 So I can better remember things about a person,
 I would like to see a narrative of things I know about them on their profile.
 ```
+![Mock up of profile page](https://user-images.githubusercontent.com/25978953/28678165-90039138-72e7-11e7-9b4e-c65f46998bd8.jpg)

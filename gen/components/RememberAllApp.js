@@ -4,12 +4,14 @@ import {
   StyleSheet,
   Text,
   TextInput,
+  ScrollView,
   View
 } from 'react-native';
 
 import ContactsList from './ContactsList';
 import NewContactForm from './NewContactForm';
 import WelcomeHeader from './WelcomeHeader';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 import { hook } from 'cavy';
 
@@ -38,10 +40,11 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: '#43d8ae',
   },
   welcome: {
     fontSize: 20,
+    color: 'white',
     textAlign: 'center',
     margin: 10,
   },

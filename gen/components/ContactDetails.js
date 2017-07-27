@@ -23,7 +23,6 @@ class ContactDetails extends React.Component {
         <Text>
           { this.state.contact.name }
           { this.state.contact.tags[0].name }
-          { this.state.contact.role }
         </Text>
         <Button
           ref={this.props.generateTestHook('ContactDetails.EditButton')}

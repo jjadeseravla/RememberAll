@@ -43,17 +43,17 @@ class EditContactForm extends React.Component {
         <TextInput
           onChangeText={(role) => this.setState({role})}
           ref={this.props.generateTestHook('EditContactForm.RoleInput')}
-          placeholder={this.state.contact.role}
+          value={this.state.role}
         />
         <TextInput
           onChangeText={(organisation) => this.setState({organisation})}
           ref={this.props.generateTestHook('EditContactForm.OrganisationInput')}
-          placeholder={this.state.contact.organisation}
+          value={this.state.organisation}
         />
         <TextInput
           onChangeText={(context) => this.setState({context})}
           ref={this.props.generateTestHook('EditContactForm.ContextInput')}
-          placeholder={this.state.contact.context}
+          value={this.state.context}
         />
         <Button
           onPress={this.updateContact}

@@ -78,7 +78,6 @@ class NewContactForm extends React.Component {
           onPress={this.createNewContact}
           ref={this.props.generateTestHook('NewContactForm.Button')}
           title='Add new contact'
-          // accessibilityLabel='Add contact button'
         />
       </View>
     )

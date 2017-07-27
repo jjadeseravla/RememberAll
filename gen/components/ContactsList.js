@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import { Text, View, StyleSheet } from 'react-native';
 import Contact from './Contact'
 import SearchBar from './SearchBar'
 
@@ -46,5 +46,13 @@ class ContactsList extends React.Component {
     )
   };
 };
+
+const styles = StyleSheet.create({
+  maintitle: {
+    color: 'white',
+    fontSize: 30,
+    fontFamily: 'Euphemia UCAS',
+  },
+});
 
 export default ContactsList

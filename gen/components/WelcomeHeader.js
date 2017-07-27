@@ -9,8 +9,18 @@ import {
 
 class WelcomeHeader extends React.Component {
   render() {
-    return <Text>RememberAll</Text>
+    return <Text style={styles.maintitle}>
+    RememberAll
+    </Text>
   }
 }
+
+const styles = StyleSheet.create({
+  maintitle: {
+    color: 'white',
+    fontSize: 30,
+    fontFamily: 'Euphemia UCAS',
+  },
+});
 
 export default WelcomeHeader

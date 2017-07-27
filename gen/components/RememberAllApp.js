@@ -23,7 +23,6 @@ class RememberAllApp extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-
         <WelcomeHeader />
         <NewContactForm />
         <ContactsList navigation={ this.props.navigation }/>

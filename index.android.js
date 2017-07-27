@@ -23,7 +23,7 @@ const testHookStore = new TestHookStore();
 export default class RememberAll extends Component {
   render() {
     return (
-      <Tester specs={[AddContactSpec, SearchBarSpec, ContactDetailsSpec, ContactDetailsHasNarrativeSpec]} store={testHookStore} waitTime={2000} startDelay={3000}>
+      <Tester specs={[AddContactSpec, SearchBarSpec, ContactDetailsSpec, ContactDetailsHasNarrativeSpec]} store={testHookStore} waitTime={1000} startDelay={1000}>
         <Root />
       </Tester>
     );

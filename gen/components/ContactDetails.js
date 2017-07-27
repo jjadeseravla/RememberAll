@@ -17,12 +17,20 @@ class ContactDetails extends React.Component {
     this.props.navigation.navigate('Contacts')
   }
 
+  listTags(contact) {
+    const tagsList = []
+    for (let index = 0, length = contact.tags.length; index<length; index++) {
+      tagsList.push(contact.tags[index].name + ' ')
+     }
+    return tagsList
+  };
+
   render() {
     return (
       <View ref={this.props.generateTestHook(`ContactDetails.${this.state.contact.name}`)}>
         <Text>
           { this.state.contact.name }
-          { this.state.contact.tags[0].name }
+          { this.listTags(this.state.contact) }
         </Text>
         <Button
           ref={this.props.generateTestHook('ContactDetails.EditButton')}

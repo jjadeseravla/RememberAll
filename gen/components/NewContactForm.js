@@ -14,15 +14,30 @@ class NewContactForm extends React.Component {
     this.createNewContact = this.createNewContact.bind(this);
   }
 
+  addContactTag(tagName) {
+    const tagEntry = realm.objects('Tag').filtered(`name ==[c] "${tagName}"`)[0]
+    if (tagEntry) {
+      if (contact.tags.filtered(`name ==[c] "${tagEntry.name}"`)[0]){
+        return
+      } else {
+      realm.write(() => {
+        contact.tags.push(tagEntry)
+      });
+    };
+    } else {
+      realm.write(() => {
+        contact.tags.push(realm.create('Tag', {name: tagName}))
+      });
+    };
+  };
+
   createNewContact() {
     realm.write(() => {
       contact = realm.create('Contact', {name: this.state.nameText, role: this.state.role, organisation: this.state.organisation, context: this.state.context});
     });
     const tags = this.state.tagsText.split(',');
     for(let tag of tags) {
-      realm.write(() => {
-        contact.tags.push(realm.create('Tag', {name: tag}))
-      })
+      this.addContactTag(tag)
     };
   };
 

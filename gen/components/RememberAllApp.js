@@ -20,12 +20,11 @@ class RememberAllApp extends React.Component {
   constructor(props) {
     super(props)
     this.state = { refreshing: false }
-
   }
 
   render() {
     return (
-       <View style={styles.container}>
+      <View style={styles.container}>
         <WelcomeHeader />
         <NewContactForm />
         <ContactsList navigation={ this.props.navigation }/>

@@ -3,6 +3,7 @@ import { StackNavigator } from 'react-navigation';
 
 import RememberAllApp from '../components/RememberAllApp';
 import ContactDetails from '../components/ContactDetails';
+import EditContactForm from '../components/EditContactForm';
 
 export const Root = StackNavigator({
   Contacts: {
@@ -10,5 +11,8 @@ export const Root = StackNavigator({
   },
   Details: {
     screen: ContactDetails,
+  },
+  EditContact: {
+    screen: EditContactForm,
   },
 })

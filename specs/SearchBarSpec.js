@@ -39,5 +39,14 @@ export default function(spec) {
       await spec.notExists('Contact.Timmy');
       await spec.exists('Contact.Esme');
     });
+
+    spec.it('filters by tags', async () => {
+      await spec.fillIn('NewContactForm.NameInput', 'Goku');
+      await spec.fillIn('NewContactForm.TagsInput', 'Super Saiyan, loves food');
+      await spec.press('NewContactForm.Button');
+      await spec.fillIn('SearchBar.TextInput', 'loves food');
+      await spec.notExists('Contact.Esme');
+      await spec.exists('Contact.Goku');
+    });
   });
 }

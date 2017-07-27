@@ -17,7 +17,13 @@ describe('ContactDetails', () => {
   });
 
   it('Renders details of a contact', () => {
-    const jsontree = renderer.create(<ContactDetails navigation={navigationFake}/>).toJSON();
+    const jsontree = renderer.create(<ContactDetails navigation={navigationFake} />).toJSON();
     expect(jsontree.children[0].type).to.equal('Text');
   });
+
+  it('Renders an edit button', () => {
+    const jsontree = renderer.create(<ContactDetails navigation={navigationFake} />).toJSON();
+    expect(jsontree.children[1].type).to.equal('View');
+    expect(jsontree.children[1].props.accessibilityComponentType).to.equal('button');
+  })
 });

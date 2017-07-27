@@ -40,16 +40,25 @@ class EditContactForm extends React.Component {
         <Text>
           Update {this.state.contact.name}'s details
         </Text>
+        <Text>
+          Role:
+        </Text>
         <TextInput
           onChangeText={(role) => this.setState({role})}
           ref={this.props.generateTestHook('EditContactForm.RoleInput')}
           value={this.state.role}
         />
+        <Text>
+          Organisation:
+        </Text>
         <TextInput
           onChangeText={(organisation) => this.setState({organisation})}
           ref={this.props.generateTestHook('EditContactForm.OrganisationInput')}
           value={this.state.organisation}
         />
+        <Text>
+          Where you met:
+        </Text>
         <TextInput
           onChangeText={(context) => this.setState({context})}
           ref={this.props.generateTestHook('EditContactForm.ContextInput')}

@@ -22,13 +22,16 @@ describe('ContactDetails', () => {
     );
   });
 
-  it('Renders a form', () => {
+  it('Renders a form with labels', () => {
     const jsontree = renderer.create(<EditContactForm navigation={navigationFake} />).toJSON();
     expect(jsontree.children[0].type).to.equal('Text');
-    expect(jsontree.children[1].type).to.equal('TextInput');
+    expect(jsontree.children[1].type).to.equal('Text');
     expect(jsontree.children[2].type).to.equal('TextInput');
-    expect(jsontree.children[3].type).to.equal('TextInput');
-    expect(jsontree.children[4].type).to.equal('View');
-    expect(jsontree.children[4].props.accessibilityComponentType).to.equal('button');
+    expect(jsontree.children[3].type).to.equal('Text');
+    expect(jsontree.children[4].type).to.equal('TextInput');
+    expect(jsontree.children[5].type).to.equal('Text');
+    expect(jsontree.children[6].type).to.equal('TextInput');
+    expect(jsontree.children[7].type).to.equal('View');
+    expect(jsontree.children[7].props.accessibilityComponentType).to.equal('button');
   });
 });

@@ -11,19 +11,18 @@ describe('NewContact', () => {
 
   it('creates a new contact', () => {
     realm.write(() => {
-      contact = realm.create('Contact', {name: 'Sally'});
+    contact = realm.create('Contact', {name: 'Sally'});
     });
     expect(contact.name).to.equal('Sally');
   });
 
   it('adds multiple tags to a new contact', () => {
     realm.write(() => {
-      contact = realm.create('Contact', {name: 'Jenny'});
-      contact.tags.push(realm.create('Tag', {name: 'Vaporwave'}))
-      contact.tags.push(realm.create('Tag', {name: 'rockin'}))
+    contact = realm.create('Contact', {name: 'Jenny'});
+    contact.tags.push(realm.create('Tag', {name: 'Vaporwave'}))
+    contact.tags.push(realm.create('Tag', {name: 'rockin'}))
     });
     expect(contact.tags[0].name).to.equal('Vaporwave');
     expect(contact.tags[1].name).to.equal('rockin');
   });
-
 });

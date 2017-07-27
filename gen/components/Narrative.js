@@ -32,6 +32,13 @@ class Narrative extends React.Component {
         </Text>
       )
     }
+    if (this.state.contact.context === null) {
+      return(
+        <Text>
+          {`This is ${this.state.contact.name}, a ${this.state.contact.role} whom you works ${this.state.contact.organisation}`}
+        </Text>
+      )
+    }
     return(
       <View ref={this.props.generateTestHook(`ContactDetails.${this.state.contact.name}.Narrative`)}>
         <Text >

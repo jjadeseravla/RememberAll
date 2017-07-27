@@ -16,7 +16,7 @@ class ContactDetails extends React.Component {
           { this.state.contact.name }
           { this.state.contact.tags[0].name }
         </Text>
-        <Narrative
+        <Narrative ref={this.props.generateTestHook(`ContactDetails.${this.state.contact.name}.Narrative`)}
           contact={ this.state.contact }
         />
 

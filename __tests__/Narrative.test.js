@@ -11,7 +11,7 @@ describe('Narrative', () => {
 
   it('add specific info to a contact', () => {
     realm.write(() => {
-    contact = realm.create('Contact', {name: 'Jenny', role: 'Vaporlord', organisation: 'Makers Academy', context: 'Queer Code'});
+      contact = realm.create('Contact', {name: 'Jenny Wem', role: 'Vaporlord', organisation: 'Makers Academy', context: 'Queer Code'});
     });
     expect(contact.role).to.equal('Vaporlord');
     expect(contact.organisation).to.equal('Makers Academy');

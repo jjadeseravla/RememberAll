@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, TextInput } from 'react-native';
+import { View, TextInput, StyleSheet } from 'react-native';
 
 import { hook } from 'cavy';
 
@@ -12,7 +12,7 @@ class SearchBar extends React.Component {
   render() {
     return (
       <View>
-        <TextInput
+        <TextInput style={styles.words}
           ref={this.props.generateTestHook('SearchBar.TextInput')}
           placeholder='SearchBar'
           onChangeText={(text) => this.handleTextChange(text)}
@@ -21,5 +21,13 @@ class SearchBar extends React.Component {
     )
   };
 };
+
+const styles = StyleSheet.create({
+  words: {
+    color: 'white',
+    fontSize: 15,
+    fontFamily: 'Euphemia UCAS',
+  },
+});
 
 export default hook(SearchBar);

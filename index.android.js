@@ -16,6 +16,7 @@ import AddContactSpec from './specs/AddContactSpec';
 import SearchBarSpec from './specs/SearchBarSpec';
 import ContactDetailsSpec from './specs/ContactDetailsSpec';
 import ContactDetailsHasNarrativeSpec from './specs/ContactDetailsHasNarrativeSpec'
+import EditContactSpec from './specs/EditContactSpec';
 
 const testHookStore = new TestHookStore();
 

@@ -12,9 +12,16 @@ class ContactsList extends React.Component {
     super()
     this.state = {refreshing: false, text: null}
     this.refreshContacts = this.refreshContacts.bind(this)
+  }
+
+  componentDidMount() {
     realm.addListener('change', () => {
       this.setState({ refreshing: true })
     })
+  }
+
+  componentWillUnmount() {
+    realm.removeAllListeners();
   }
 
   refreshContacts(text) {

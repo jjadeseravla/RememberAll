@@ -5,7 +5,8 @@ import {
   Text,
   TextInput,
   ScrollView,
-  View
+  View,
+  Image
 } from 'react-native';
 
 import ContactsList from './ContactsList';
@@ -25,6 +26,7 @@ class RememberAllApp extends React.Component {
   render() {
     return (
       <View style={styles.container}>
+        <Image source={require('./logo.png')}/>
         <WelcomeHeader />
         <NewContactForm />
         <ContactsList navigation={ this.props.navigation }/>

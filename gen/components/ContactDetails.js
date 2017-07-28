@@ -49,15 +49,17 @@ class ContactDetails extends React.Component {
           <Text style={styles.tagtext}>
             { this.listTags(this.state.contact) }
             {"\n"}
+            {"\n"}
+            {"\n"}
           </Text>
           <Button
-            color="#D38DCC"
+            color="#43d8ae"
             ref={this.props.generateTestHook('ContactDetails.EditButton')}
             title='Edit contact'
             onPress={this.navigateToEdit.bind(this)}
           />
           <Button
-            color="#D38DCC"
+            color="#43d8ae"
             ref={this.props.generateTestHook('ContactDetails.HomeButton')}
             title='Home'
             onPress={this.navigateToHome.bind(this)}

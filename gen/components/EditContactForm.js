@@ -49,6 +49,7 @@ class EditContactForm extends React.Component {
           Role:
         </Text>
         <TextInput
+          style={styles.inputbox}
           onChangeText={(role) => this.setState({role})}
           ref={this.props.generateTestHook('EditContactForm.RoleInput')}
           value={this.state.role}
@@ -57,6 +58,7 @@ class EditContactForm extends React.Component {
           Organisation:
         </Text>
         <TextInput
+          style={styles.inputbox}
           onChangeText={(organisation) => this.setState({organisation})}
           ref={this.props.generateTestHook('EditContactForm.OrganisationInput')}
           value={this.state.organisation}
@@ -65,10 +67,14 @@ class EditContactForm extends React.Component {
           Where you met:
         </Text>
         <TextInput
+          style={styles.inputbox}
           onChangeText={(context) => this.setState({context})}
           ref={this.props.generateTestHook('EditContactForm.ContextInput')}
           value={this.state.context}
         />
+        <Text>
+        {"\n"}
+        </Text>
         <Button color='white'
           onPress={this.updateContact}
           ref={this.props.generateTestHook('EditContactForm.Button')}
@@ -103,6 +109,13 @@ const styles = StyleSheet.create({
   smalltext: {
     color: 'white',
     fontSize: 20,
+    fontFamily: 'Euphemia UCAS',
+    fontWeight: 'normal',
+    textAlign: 'center'
+  },
+  inputbox: {
+    color: '#699b96',
+    fontSize: 15,
     fontFamily: 'Euphemia UCAS',
     fontWeight: 'normal',
     textAlign: 'center'

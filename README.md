@@ -25,7 +25,7 @@ Clone this repository to your machine:
 $ git clone git@github.com:jjadeseravla/RememberAll.git
 ```
 
-Naviagte to the repo:
+Navigate to the repo:
 ```
 $ cd RememberAll
 ```
